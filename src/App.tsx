@@ -37,11 +37,15 @@ function App() {
   // }, []);
 
   return (
-    <div className="flex justify-center items-center text-red-200">
-      <Link to={"/about"}>About</Link>
-      <Link to={"/about"}>Homes</Link>
+    <div className="flex justify-left justify-items-center text-black font-bold text-1xl md:text-3xl gap-4 min-h-screen bg-slate-300">
+      <Link to={"/"} className="text-blue-600 hover:underline active:text-black-800">About</Link>
+      <Link to={"/about"} className="text-blue-600 hover:underline hover:text-blue-800 ">Homes</Link>
       <Routes>
-        <Route path="/" element={<div>Homes</div>} />
+        <Route path="/" element={
+          <div className="text-right font-bold text-2xl md:text-4xl">Homes</div>
+          
+          
+          } />
         <Route path="/about" element={<AboutScreens />} />
       </Routes>
     </div>
